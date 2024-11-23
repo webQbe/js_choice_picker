@@ -1,0 +1,60 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+
+* {
+    /* Applies the rules to all elements. */
+
+    box-sizing: border-box; /* Ensures padding and borders are included within the element's specified width and height, making layout calculations more predictable. */
+ }
+
+body{
+    background-color: #2b88f0;
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    flex-direction: column; /* Align Y */
+    align-items: center; /* Center X */
+    justify-content: center; /* Center Y */
+    height: 100vh; /* Take whole height */
+    overflow: hidden; /* No scrollbars */
+    margin: 0; /* No margins */
+}
+
+
+h3 {
+    color: #fff;
+    margin: 10px 0 20px; /* Shorthand Breakdown
+    First Value (10px): Sets the top margin to 10px.
+    Second Value (0): Sets the right and left margins (horizontal) to 0.
+    Third Value (20px): Sets the bottom margin to 20px. */
+
+    
+}
+
+.container{
+
+    width: 500px;
+
+}
+
+textarea {
+    border: none;
+    display: block; /* What display: block; Does?
+
+        Takes Full Width (when width is set to 100%):
+            A block-level element expands to fill the entire width of its parent container unless restricted by a specific width (like width: 100%; in this case).
+            The textarea becomes a full-width, standalone block.
+
+        Forces a Line Break:
+            A block-level element always starts on a new line in the document flow, meaning it won’t sit inline with other elements.
+
+        Overrides Potential Inline Behavior:
+            If the <textarea> were styled as display: inline; or inline-block; in other parts of the CSS or via inherited styles, the display: block; rule ensures the intended block behavior. */
+
+    width: 100%;
+    height: 100px;
+    font-family: inherit;
+    padding: 10px;
+    margin: 0 0 20px; /* T L-R B */
+    font-size: 16px;
+}
