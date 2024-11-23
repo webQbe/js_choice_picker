@@ -55,6 +55,33 @@ textarea {
     height: 100px;
     font-family: inherit;
     padding: 10px;
-    margin: 0 0 20px; /* T L-R B */
+    margin: 0 0 20px; /* T & L-R & B */
     font-size: 16px;
+}
+
+.tag {
+    background-color: #f0932b;
+    color: #fff;
+    border-radius: 50px ;
+    padding: 10px 20px; /* T-B & L-R */
+    margin: 0 5px 10px 0; /* T R B L */
+    font-size: 14px;
+    display: inline-block; /* Characteristics of display: inline-block;
+
+        Inline Features:
+            The element does not force a line break before or after it, so it can sit alongside other elements in the same line (like an inline element).
+            Useful for creating layouts where multiple elements are displayed side by side, such as buttons or images in a row.
+
+        Block Features:
+            The element respects block-level properties like width, height, padding, and margin, which inline elements typically do not.
+            You can control the dimensions of the element explicitly using width and height
+
+        */
+}
+
+/* Style for picked tag */
+.tag.highlight{
+
+    background-color: #273c75;
+
 }
