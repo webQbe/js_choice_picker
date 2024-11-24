@@ -73,6 +73,7 @@ function createTags(input){
 
 function randomSelect(){
 
+    // Set time for random picking
     const times = 30;
 
     // Call pickRandomTag() every 100ms
@@ -88,6 +89,22 @@ function randomSelect(){
         setTimeout(() => { unhighlightTag(randomTag)}, 100)
     
     }, 100);
+
+    // Run in 3 seconds (30 times * 100ms)
+    setTimeout(() => {
+
+        // 1. Stop picking & highlighting
+        clearInterval(interval);
+
+        // 2. Pick & Highlight a randomTag in 100ms
+        setTimeout(() => {
+
+            const randomTag = pickRandomTag();
+            highlightTag(randomTag);
+
+        }, 100)
+
+    }, times * 100);
 
 }
 
