@@ -13,4 +13,11 @@ textarea.addEventListener('keyup', (e) => {
 
 });
 
+function createTags(input){
+
+    // Log input
+    console.log(input);
+
+}
+
 
