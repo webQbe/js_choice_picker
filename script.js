@@ -15,9 +15,11 @@ textarea.addEventListener('keyup', (e) => {
 
 function createTags(input){
 
-    // Log input
-    console.log(input);
+   // Split input string 
+   const tags = input.split(','); // comma separates each item
+   console.log(tags);
 
 }
+
 
 
