@@ -1,5 +1,5 @@
 // Define DOM Elements
-const tagsContainer = document.getElementById('tags');
+const tagList = document.getElementById('tags');
 const textarea = document.getElementById('textarea');
 
 // Auto focus textarea
@@ -36,11 +36,27 @@ function createTags(input){
 
         before map:["apple", " banana ", " orange"]
         after map: ["apple", "banana", "orange"]  
-
         */
 
-   console.log(tags);
+        // Clear default tagList
+        tagList.innerHTML = '';
 
+        tags.forEach(tag => {
+
+            // Create span element for current tag
+            const tagSpan = document.createElement('span');
+
+            // Add CSS slector
+            tagSpan.classList.add('tag');
+
+            // Add text from current substring
+            tagSpan.innerText = tag;
+
+            // Add to tagList
+            tagList.appendChild(tagSpan);
+
+        });
+    
 }
 
 
