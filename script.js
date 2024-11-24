@@ -11,6 +11,18 @@ textarea.addEventListener('keyup', (e) => {
     // Call createTags() with text typed in
     createTags(e.target.value);
 
+    if(e.key === 'Enter'){
+        
+        // If Enter key is pressed
+
+        // Clear textarea after 10ms
+        setTimeout(() => e.target.value = '', 10); 
+
+        // Randomly pick a choice
+        randomSelect();
+
+    }
+
 });
 
 function createTags(input){
