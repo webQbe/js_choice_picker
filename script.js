@@ -16,7 +16,29 @@ textarea.addEventListener('keyup', (e) => {
 function createTags(input){
 
    // Split input string 
-   const tags = input.split(','); // comma separates each item
+   
+   const tags = input 
+    .split(',') // Split input string into an array of substrings based on comma
+
+    .filter(tag => tag.trim() !== '')/* Removes empty or whitespace-only strings from the array.
+        tag.trim(): 
+        Just checking leading and trailing whitespace from each string, but filter() does not modify the array elements.
+
+        tag.trim() !== '' Condition: 
+        filter() method just evaluates whether each element should be included in the result based on the provided condition that if leading and trailing whitespaces from each string are removed with tag.trim(), no empty strings should be included (!== '').
+
+        Example: 
+            before filter:["apple", " banana ", " ", " orange"] 
+            after filter :["apple", " banana ", " orange"]
+        */
+
+    .map(tag => tag.trim()); /* Actually Trims whitespace from the beginning and end of each remaining tag in the array. 
+
+        before map:["apple", " banana ", " orange"]
+        after map: ["apple", "banana", "orange"]  
+
+        */
+
    console.log(tags);
 
 }
