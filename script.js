@@ -103,4 +103,10 @@ function pickRandomTag(){
 }
 
 
+function highlightTag(tag){tag.classList.add('highlight');}
+
+function unhighlightTag(tag){tag.classList.remove('highlight');}
+
+
+
 
