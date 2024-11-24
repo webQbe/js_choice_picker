@@ -12,7 +12,7 @@ textarea.addEventListener('keyup', (e) => {
     createTags(e.target.value);
 
     if(e.key === 'Enter'){
-        
+
         // If Enter key is pressed
 
         // Clear textarea after 10ms
@@ -69,6 +69,37 @@ function createTags(input){
 
         });
     
+}
+
+function randomSelect(){
+
+    const times = 30;
+
+    // Call pickRandomTag() every 100ms
+    const interval = setInterval(() => {const randomTag = pickRandomTag()}, 100);
+
+}
+
+function pickRandomTag(){
+
+    // Select all tags to create tags array
+    const tags = document.querySelectorAll('.tag');
+
+    // Generate random index number to pick a tag by
+    // multiplying random decimal by array length and
+    // rounding it down to get a whole number
+    return tags[Math.floor(Math.random() * tags.length)];
+
+    /* Math.floor(): rounds a number down to the nearest integer.
+
+           It takes a number and removes the decimal portion, always moving toward the next lowest integer.
+           For example:
+
+           Math.floor(4.7);  // Output: 4
+           Math.floor(-4.7); // Output: -5 
+       */
+
+
 }
 
 
