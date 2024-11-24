@@ -27,7 +27,7 @@ h3 {
     First Value (10px): Sets the top margin to 10px.
     Second Value (0): Sets the right and left margins (horizontal) to 0.
     Third Value (20px): Sets the bottom margin to 20px. */
-
+    text-align: center;
     
 }
 
